@@ -1,6 +1,8 @@
 import React from "react";
 import "./Kennel.css";
 import { AnimalCard } from "./animal/AnimalCard";
+import { Employee } from "./employee/Employee";
+import { Location } from "./location/Location";
 
 export const Kennel = () => (
     <>
@@ -18,5 +20,26 @@ export const Kennel = () => (
             <AnimalCard />
             <AnimalCard />
         </article>
+
+        <h2>Employees</h2>
+        <article className="employees">
+            <Employee />
+            <Employee />
+            <Employee />
+        </article>
+
+        <h2>Locations</h2>
+        <article className="locations">
+            <Location />
+            <Location />
+        </article>
+
+        {/* <h2>Customers</h2>
+        <article className="customers">
+            <Customer />
+            <Customer />
+            <Customer />
+            <Customer />
+        </article> */}
     </>
 )
