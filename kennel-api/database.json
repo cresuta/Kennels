@@ -6,6 +6,20 @@
             "breed": "Poodle",
             "customerId": 1,
             "locationId": 2
+        },
+        {
+            "id": 2,
+            "name": "Nilla",
+            "breed": "English Cream Golden Retriever",
+            "customerId": 2,
+            "locationId": 1
+        },
+        {
+            "id": 3,
+            "name": "Mya",
+            "breed": "Golden Retriever",
+            "customerId": 3,
+            "locationId": 2
         }
     ],
     "customers": [
@@ -13,6 +27,16 @@
             "id": 1,
             "name": "Hannah Hall",
             "address": "7002 Chestnut Ct"
+        },
+        {
+            "id": 2,
+            "name": "Mark Thomas",
+            "address": "101 Willow Dr"
+        },
+        {
+            "id": 3,
+            "name": "Charlie Louise",
+            "address": "304 Penelope Ln"
         }
     ],
     "employees": [],
