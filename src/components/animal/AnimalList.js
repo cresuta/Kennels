@@ -12,7 +12,7 @@ export const AnimalList = () => {
     console.log("AnimalList: useEffect - getAnimals")
     getAnimals()
 
-  }, [])
+  })
 
 
   return (

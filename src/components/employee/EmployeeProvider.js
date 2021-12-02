@@ -24,12 +24,6 @@ export const EmployeeProvider = (props) => {
         .then(getEmployees)
     }
 
-    /*
-        Return a context provider which has the
-        `animals` state, `getAnimals` function,
-        and the `addAnimal` function as keys. This
-        allows any child elements to access them.
-    */
     return (
         <EmployeeContext.Provider value={{
             employees, getEmployees, addEmployees

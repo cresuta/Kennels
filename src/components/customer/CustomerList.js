@@ -4,7 +4,7 @@ import { CustomerCard } from "./CustomerCard"
 import "./Customer.css"
 
 export const CustomerList = () => {
-  // This state changes when `getEmployees()` is invoked below
+  // This state changes when `getCustomers()` is invoked below
   const { customers, getCustomers } = useContext(CustomerContext)
 
   //useEffect - reach out to the world for something
@@ -12,7 +12,7 @@ export const CustomerList = () => {
     console.log("CustomerList: useEffect - getCustomers")
     getCustomers()
 
-  }, [])
+  })
 
 
   return (

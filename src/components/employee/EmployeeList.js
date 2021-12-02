@@ -12,7 +12,7 @@ export const EmployeeList = () => {
     console.log("EmployeeList: useEffect - getEmployees")
     getEmployees()
 
-  }, [])
+  })
 
 
   return (

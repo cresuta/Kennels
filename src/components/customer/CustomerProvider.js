@@ -23,13 +23,7 @@ export const CustomerProvider = (props) => {
         })
         .then(getCustomers)
     }
-
-    /*
-        Return a context provider which has the
-        `animals` state, `getAnimals` function,
-        and the `addAnimal` function as keys. This
-        allows any child elements to access them.
-    */
+    
     return (
         <CustomerContext.Provider value={{
             customers, getCustomers, addCustomers
