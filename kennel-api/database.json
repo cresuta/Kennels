@@ -39,7 +39,28 @@
             "address": "304 Penelope Ln"
         }
     ],
-    "employees": [],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Jeremy Bakker",
+            "locationId": 2
+        },
+        {
+            "id": 2,
+            "name": "Scott Smith",
+            "locationId": 2
+        },
+        {
+            "id": 3,
+            "name": "Jessica Stan",
+            "locationId": 1
+        },
+        {
+            "id": 4,
+            "name": "Lisa Reynolds",
+            "locationId": 1
+        }
+    ],
     "locations": [
         {
             "id": 1,
