@@ -77,6 +77,11 @@
       "id": 4,
       "name": "Lisa Reynolds",
       "locationId": 1
+    },
+    {
+      "name": "Derrick Smith",
+      "locationId": 1,
+      "id": 5
     }
   ],
   "locations": [
