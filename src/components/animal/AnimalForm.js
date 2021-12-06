@@ -4,6 +4,7 @@ import { AnimalContext } from "../animal/AnimalProvider"
 import { CustomerContext } from "../customer/CustomerProvider"
 import "./Animal.css"
 import { useNavigate } from 'react-router-dom';
+import { CustomerCard } from "../customer/CustomerCard"
 
 export const AnimalForm = () => {
     const { addAnimal } = useContext(AnimalContext)
@@ -29,7 +30,8 @@ export const AnimalForm = () => {
     and locations state on initialization.
     */
     useEffect(() => {
-      getCustomers().then(getLocations)
+      getCustomers()
+      .then(getLocations)
     }, [])
 
     //when a field changes, update state. The return will re-render and display based on the values in state
@@ -51,6 +53,10 @@ export const AnimalForm = () => {
 
       const locationId = parseInt(animal.locationId)
       const customerId = parseInt(animal.customerId)
+
+      animal.locationId = locationId
+      animal.customerId = customerId
+
 
       if (locationId === 0) {
         window.alert("Please select a location")
@@ -74,7 +80,7 @@ export const AnimalForm = () => {
           <fieldset>
               <div className="form-group">
                   <label htmlFor="location">Assign to location: </label>
-                  <select defaultValue={animal.locationId} name="locationId" id="locationId" className="form-control" >
+                  <select onChange={handleControlledInputChange} defaultValue={animal.locationId} name="locationId" id="locationId" className="form-control" >
                       <option value="0">Select a location</option>
                       {locations.map(l => (
                           <option key={l.id} value={l.id}>
@@ -87,7 +93,7 @@ export const AnimalForm = () => {
           <fieldset>
               <div className="form-group">
                   <label htmlFor="customerId">Customer: </label>
-                  <select defaultValue={animal.customerId} name="customer" id="customerId" className="form-control" >
+                  <select onChange={handleControlledInputChange} defaultValue={animal.customerId} name="customer" id="customerId" className="form-control" >
                       <option value="0">Select a customer</option>
                       {customers.map(c => (
                           <option key={c.id} value={c.id}>

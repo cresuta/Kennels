@@ -21,7 +21,8 @@ export const AnimalProvider = (props) => {
             },
             body: JSON.stringify(animalObj)
         })
-        .then(getAnimals)
+        // .then(getAnimals)
+        .then(res => res.json())
     }
 
     /*
