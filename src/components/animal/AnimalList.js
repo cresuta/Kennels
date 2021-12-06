@@ -4,12 +4,14 @@ import { LocationContext } from "../location/LocationProvider"
 import {CustomerContext} from "../customer/CustomerProvider"
 import { AnimalCard } from "./AnimalCard"
 import "./Animal.css"
+import { useNavigate } from "react-router"
 
 export const AnimalList = () => {
   // This state changes when `getAnimals()` is invoked below
   const { animals, getAnimals } = useContext(AnimalContext)
   const {locations, getLocations} = useContext(LocationContext)
   const { customers, getCustomers } = useContext(CustomerContext)
+  const navigate = useNavigate()
 
 
   //useEffect - reach out to the world for something
@@ -19,10 +21,13 @@ export const AnimalList = () => {
     .then(getCustomers)
     .then(getAnimals)
 
-  })
+  }, [])
 
 
   return (
+    <>
+    <h2>Animals</h2>
+    <button onClick={() => {navigate("create")}}>Add Animal</button>
     <div className="animals">
       {console.log("AnimalList: Render", animals)}
       {
@@ -36,5 +41,6 @@ export const AnimalList = () => {
         })
       }
     </div>
+    </>
   )
 }
