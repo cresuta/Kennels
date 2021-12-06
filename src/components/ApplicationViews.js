@@ -11,6 +11,7 @@ import { CustomerProvider } from "./customer/CustomerProvider"
 import { CustomerList } from "./customer/CustomerList"
 import { AnimalForm } from "./animal/AnimalForm"
 import {EmployeeForm} from "./employee/EmployeeForm"
+import { LocationForm } from "./location/LocationForm"
 
 export const ApplicationViews = () => {
     return (
@@ -23,7 +24,7 @@ export const ApplicationViews = () => {
                             <Route path="animals/*" element={<AnimalList />} />
                             <Route path="animals/create/*" element={<AnimalForm />} />
                             <Route path="locations/*" element={<LocationList />} />
-                            
+                            <Route path="locations/create/*" element={<LocationForm />} />
                             <Route path="employees/*" element={<EmployeeList />} />
                             <Route path="employees/create/*" element={<EmployeeForm />} />
                             <Route path="customers/*" element={<CustomerList />} />
