@@ -44,17 +44,20 @@
     {
       "id": 1,
       "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct"
+      "address": "7002 Chestnut Ct",
+      "email": "hannah@me.com"
     },
     {
       "id": 2,
       "name": "Mark Thomas",
-      "address": "101 Willow Dr"
+      "address": "101 Willow Dr",
+      "email": "mark@me.com"
     },
     {
       "id": 3,
       "name": "Charlie Louise",
-      "address": "304 Penelope Ln"
+      "address": "304 Penelope Ln",
+      "email": "charlie@me.com"
     }
   ],
   "employees": [
