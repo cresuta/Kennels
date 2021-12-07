@@ -19,7 +19,7 @@ export const EmployeeList = () => {
   return (
     <>
     <h2>Employees</h2>
-    <button onClick={() => {navigate("create")}}>Add Employee</button>
+    <button onClick={() => {navigate("/employees/create")}}>Add Employee</button>
     <div className="employees">
       {
         employees.map(employee => {
