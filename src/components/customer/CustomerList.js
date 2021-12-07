@@ -12,7 +12,7 @@ export const CustomerList = () => {
     console.log("CustomerList: useEffect - getCustomers")
     getCustomers()
 
-  })
+  }, [])
 
 
   return (
