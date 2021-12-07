@@ -29,8 +29,8 @@ export const LocationList = () => {
     <div className="locations">
       {
         locations.map(location => {
-          const allAnimals = animals.map(a => a.locationId === location.id)
-          const allEmployees = employees.map(e => e.locationId === location.id)
+          const allAnimals = animals.filter(a => a.locationId === location.id)
+          const allEmployees = employees.filter(e => e.locationId === location.id)
           return <LocationCard key={location.id} 
           location = {location}
           animals = {allAnimals}
