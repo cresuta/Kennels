@@ -5,8 +5,7 @@ import { useParams, useNavigate } from "react-router-dom"
 
 export const AnimalDetail = () => {
   const { getAnimalById, releaseAnimal } = useContext(AnimalContext)
-
-	const [animal, setAnimal] = useState({})
+  const [animal, setAnimal] = useState({})
 
 	const {animalId} = useParams();
 	const navigate = useNavigate();
