@@ -1,13 +1,6 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "customerId": 1,
-      "locationId": 2
-    },
-    {
       "id": 2,
       "name": "Nilla",
       "breed": "English Cream Golden Retriever",
