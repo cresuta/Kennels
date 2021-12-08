@@ -13,6 +13,27 @@
       "breed": "Golden Retriever",
       "customerId": 3,
       "locationId": 2
+    },
+    {
+      "id": 4,
+      "name": "Lexi",
+      "breed": "Pitbull",
+      "customerId": 1,
+      "locationId": 3
+    },
+    {
+      "id": 5,
+      "name": "Rex",
+      "breed": "St. Bernard",
+      "customerId": 2,
+      "locationId": 3
+    },
+    {
+      "id": 6,
+      "name": "Chaz",
+      "breed": "Keshaund",
+      "customerId": 3,
+      "locationId": 3
     }
   ],
   "customers": [
