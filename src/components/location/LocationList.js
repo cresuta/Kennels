@@ -15,10 +15,9 @@ export const LocationList = () => {
 
   //useEffect - reach out to the world for something
   useEffect(() => {
-    console.log("LocationList: useEffect - getLocations")
-    getAnimals()
+    getLocations()
     .then(getEmployees)
-    .then(getLocations)
+    .then(getAnimals)
   }, [])
 
 
@@ -29,8 +28,8 @@ export const LocationList = () => {
     <div className="locations">
       {
         locations.map(location => {
-          const allAnimals = animals.filter(a => a.locationId === location.id)
-          const allEmployees = employees.filter(e => e.locationId === location.id)
+          const allAnimals = location.animals.filter(a => a.locationId === location.id)
+          const allEmployees = location.employees.filter(e => e.locationId === location.id)
           return <LocationCard key={location.id} 
           location = {location}
           animals = {allAnimals}

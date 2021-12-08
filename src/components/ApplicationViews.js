@@ -22,11 +22,11 @@ export const ApplicationViews = () => {
                         <Routes>               
                             <Route path="/" element={<Home />} />                    
                             <Route path="animals/*" element={<AnimalList />} />
-                            <Route path="/animals/detail/:animalId/*" element={<AnimalDetail />} />
+                            <Route path="animals/detail/:animalId/*" element={<AnimalDetail />} />
                             <Route path="locations/*" element={<LocationList />} />
                             <Route path="locations/detail/:locationId/*" element={<LocationDetail />} />
                             <Route path="employees/*" element={<EmployeeList />} />
-                            <Route path="/employees/detail/:employeeId/*" element={<EmployeeDetail />} />
+                            <Route path="employees/detail/:employeeId/*" element={<EmployeeDetail />} />
                             <Route path="customers/*" element={<CustomerList />} />
                         </Routes>
                     </CustomerProvider>

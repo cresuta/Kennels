@@ -1,25 +1,20 @@
 import React, { useContext, useEffect, useState } from "react"
 import { LocationContext } from "./LocationProvider"
-import { EmployeeContext } from "../employee/EmployeeProvider"
-import { AnimalContext } from "../animal/AnimalProvider"
 import "./Location.css"
 import { useParams, useNavigate } from "react-router-dom"
 
 export const LocationDetail = () => {
-  const { locations, getLocations, getLocationById } = useContext(LocationContext)
-  const {employees, getEmployees} = useContext(EmployeeContext)
-  const {animals, getAnimals} = useContext(AnimalContext)
-
+  const { getLocationById } = useContext(LocationContext)
+ 
 	const [location, setLocation] = useState({})
 
 	const {locationId} = useParams();
 	const navigate = useNavigate();
 
   useEffect(() => {
-    getAnimals()
-    .then(getEmployees)
-    .then(getLocationById(locationId))
+   getLocationById(locationId)
     .then((response) => {
+        console.log(response)
       setLocation(response)
     })
     }, [])
@@ -27,25 +22,15 @@ export const LocationDetail = () => {
   return (
     <>
     <section className="location">
-      <h3 className="location__name">{location.name}</h3>
+      <h2 className="location__name">{location.name}</h2>
       <div className="location__address">{location.address}</div>
-      <h2 className="employees">Employees</h2>
-      <div>
-          {
-              locations.map(location => {
-                const allEmployees = employees.filter(e => e.locationId === location.id)
-              })
-            
-          }
+      <h3 className="employees">Employees</h3>
+      <div className="employee__names">
+        {location.employees?.map(employeeObj => <p key={employeeObj.id}>{employeeObj.name}</p>)}
       </div>
-      <h2 className="animals">Current Residents</h2>
-      <div>
-          {
-              locations.map(location => {
-                const allAnimals = animals.filter(a => a.locationId === location.id)
-            })
-            
-          }
+      <h3 className="animals">Current Residents</h3>
+      <div className="animal__names"> 
+        {location.animals?.map(animalObj => <p key={animalObj.id}>{animalObj.name}</p>)}
       </div>
     </section>
     </>
