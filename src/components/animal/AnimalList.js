@@ -4,7 +4,7 @@ import { AnimalCard } from "./AnimalCard"
 import "./Animal.css"
 import { useNavigate } from "react-router"
 
-export const AnimalList = ({history}) => {
+export const AnimalList = () => {
   // This state changes when `getAnimals()` is invoked below
   const { animals, getAnimals } = useContext(AnimalContext)
   const navigate = useNavigate()
