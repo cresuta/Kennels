@@ -24,7 +24,7 @@ export const ApplicationViews = () => {
                             <Route path="/" element={<Home />} />    
 
                             <Route path="/animals/*" element={<AnimalList />} />
-                            <Route path="/animals/create/" element={<AnimalForm />} />
+                            <Route path="/animals/create/*" element={<AnimalForm />} />
                             <Route path="/animals/detail/:animalId/*" element={<AnimalDetail />} />
                             <Route path="/animals/edit/:animalId/*" element={<AnimalForm />} />
 

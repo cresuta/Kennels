@@ -25,15 +25,15 @@
       "id": 5,
       "name": "Rex",
       "breed": "St. Bernard",
-      "customerId": 2,
-      "locationId": 3
+      "locationId": 3,
+      "customerId": 2
     },
     {
-      "id": 6,
-      "name": "Chaz",
-      "breed": "Keshaund",
+      "name": "Nima",
+      "breed": "Aussie Shepard",
+      "locationId": 2,
       "customerId": 3,
-      "locationId": 3
+      "id": 6
     }
   ],
   "customers": [

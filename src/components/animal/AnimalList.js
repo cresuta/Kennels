@@ -19,7 +19,7 @@ export const AnimalList = ({history}) => {
   return (
     <>
     <h2>Animals</h2>
-    <button onClick={() => {navigate("animals/create")}}>Make Reservation</button>
+    <button onClick={() => {navigate("/animals/create")}}>Make Reservation</button>
     <div className="animals">
       {
         animals.map(animal => {

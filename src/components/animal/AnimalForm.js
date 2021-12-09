@@ -10,13 +10,7 @@ export const AnimalForm = () => {
     const { locations, getLocations } = useContext(LocationContext)
     const { customers, getCustomers } = useContext(CustomerContext)
 
-    const [animal, setAnimal] = useState({
-      name: "",
-      breed: "",
-      locationId: 0,
-      customerId: 0
-    });
-
+    const [animal, setAnimal] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
     const {animalId} = useParams();
@@ -31,14 +25,14 @@ export const AnimalForm = () => {
       /* Animal is an object with properties.
       Set the property to the new value
       using object bracket notation. */
-      newAnimal[event.target.id] = event.target.value
+      newAnimal[event.target.name] = event.target.value
       // update state
       setAnimal(newAnimal)
     }
 
     const handleSaveAnimal = () => {
-      if (parseInt(animal.locationId) === 0) {
-          window.alert("Please select a location")
+      if (parseInt(animal.locationId) === 0 || parseInt(animal.customerId) === 0) {
+          window.alert("Please select a location and/or customer")
       } else {
         //disable the button - no extra clicks
         setIsLoading(true);
@@ -51,7 +45,7 @@ export const AnimalForm = () => {
               locationId: parseInt(animal.locationId),
               customerId: parseInt(animal.customerId)
           })
-          .then(() => navigate(`/animals/detail/${animalId}`))
+          .then(() => navigate(`/animals/detail/${animal.id}`))
         } else {
           //POST - add
           addAnimal({
@@ -83,6 +77,7 @@ export const AnimalForm = () => {
     return (
       <form className="animalForm">
         <h2 className="animalForm__title">New Animal</h2>
+        
         <fieldset>
           <div className="form-group">
             <label htmlFor="animalName">Animal name: </label>
@@ -92,6 +87,7 @@ export const AnimalForm = () => {
             defaultValue={animal.name}/>
           </div>
         </fieldset>
+
         <fieldset>
           <div className="form-group">
             <label htmlFor="animalBreed">Animal Breed: </label>
@@ -101,6 +97,7 @@ export const AnimalForm = () => {
             defaultValue={animal.breed}/>
           </div>
         </fieldset>
+
         <fieldset>
           <div className="form-group">
             <label htmlFor="location">Assign to location: </label>
@@ -114,6 +111,7 @@ export const AnimalForm = () => {
             </select>
           </div>
         </fieldset>
+
         <fieldset>
           <div className="form-group">
             <label htmlFor="customer">Customer: </label>
@@ -127,6 +125,7 @@ export const AnimalForm = () => {
             </select>
           </div>
         </fieldset>
+
         <button className="btn btn-primary"
           disabled={isLoading}
           onClick={event => {
