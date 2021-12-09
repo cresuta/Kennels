@@ -24,7 +24,7 @@ export const LocationList = () => {
   return (
     <>
     <h2>Locations</h2>
-    <button onClick={() => {navigate("create")}}>Add Location</button>
+    <button onClick={() => {navigate("/locations/create")}}>Add Location</button>
     <div className="locations">
       {
         locations.map(location => {

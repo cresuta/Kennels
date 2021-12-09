@@ -34,6 +34,13 @@
       "locationId": 2,
       "customerId": 3,
       "id": 6
+    },
+    {
+      "name": "Itzy",
+      "breed": "Cat",
+      "locationId": 4,
+      "customerId": 1,
+      "id": 7
     }
   ],
   "customers": [
@@ -91,6 +98,11 @@
       "name": "Larry Lane",
       "locationId": 3,
       "id": 6
+    },
+    {
+      "name": "Rick Stan",
+      "locationId": 4,
+      "id": 7
     }
   ],
   "locations": [
@@ -108,6 +120,11 @@
       "name": "Nashville West",
       "address": "124 vineyard ln",
       "id": 3
+    },
+    {
+      "name": "Charleston Valley",
+      "address": "304 kanawah blvd",
+      "id": 4
     }
   ]
 }
