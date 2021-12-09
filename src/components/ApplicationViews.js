@@ -32,9 +32,10 @@ export const ApplicationViews = () => {
                             <Route path="/locations/*" element={<LocationList />} />
                             <Route path="/locations/detail/:locationId/*" element={<LocationDetail />} />
 
+                            <Route path="/employees/*" element={<EmployeeList />} />
                             <Route path="/employees/create/*" element={<EmployeeForm />} />
-                            <Route path="employees/*" element={<EmployeeList />} />
                             <Route path="employees/detail/:employeeId/*" element={<EmployeeDetail />} />
+                            <Route path="employees/edit/:employeeId/*" element={<EmployeeForm />} />
 
                             <Route path="customers/*" element={<CustomerList />} />
                         </Routes>
